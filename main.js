@@ -6,32 +6,31 @@ const images = document.querySelectorAll('.carousel-slide img');
 const leftButton = document.querySelector('.scroll-left');
 const rightButton = document.querySelector('.scroll-right');
 
-let counter = 0;
+let position = 0;
+// grab width of element.  depends on viewport
 const size = images[0].clientWidth;
 
-
-
 // event lister click
-
 rightButton.addEventListener('click', () => {
-    slider.style.trasition = 'transform 0.4 ease-in-out';
-    counter++;
-    slider.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    // if(position < 5 && position > 0)
+    if(position < 6)
+    {
+        position++;
+        slider.style.transform = 'translateX(' + (-size* position) + 'px)';
+    }
+    else if(position === 6){
+       return position = 0 - 1
+    }
     
 })
 leftButton.addEventListener('click', () => {
-    slider.style.trasition = 'transform 0.4 ease-in-out';
-    counter--;
-    slider.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    if(position === 0){
+        alert('cant scroll left')
+    }
+    else 
+        position--;
+        slider.style.transform = 'translateX(' + (-size * position) + 'px)';
 })
 
-// carouselSlide.addEventListener('transitionend', () => {
-//     if(images[counter].id === 'lastClone'){
-//     slider.style.trasition = 'none';
-//     counter = images.length - 2;
-//     slider.style.transform = 'translateX(' + (-size * counter) + 'px)';
 
-        
-//     }
-// })
 

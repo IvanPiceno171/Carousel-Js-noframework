@@ -19,19 +19,32 @@ img {
 
 .container1{
     border: 5px solid black;
-    width: 40%;
+    /* width: fit-content; */
+    width: 341px;
     margin: auto;
     overflow: hidden;
-    w
+    
 }
-.carousel-slide,.button-cont{
+.carousel-slide, .button-cont{
     display: flex;
+}
+
+.carousel-slide{
+    transition: ease-in-out 1s;
 }
 .button-cont{
     justify-content: center;
     padding: 3em;
 }
 
-.carousel-slide > img {
+#carouselExampleInterval{
+    width: 50%;
+    margin-left: 25%;
+}
 
+.part2img{
+flex-shrink: 0;
+min-width: 100%;
+min-height: 100%
+max-width 341px;
 }
