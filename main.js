@@ -12,7 +12,7 @@ const size = images[0].clientWidth;
 
 // event lister click
 rightButton.addEventListener('click', () => {
-    // if(position < 5 && position > 0)
+    // if(position < 0 && position < 5)
     if(position < 6)
     {
         position++;
